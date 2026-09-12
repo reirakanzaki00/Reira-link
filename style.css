@@ -2,9 +2,6 @@
    REIRA OFFICIAL LINKS
    ========================= */
 
-
-/* ---------- 基本設定 ---------- */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +14,6 @@ html {
 
 body {
     min-height: 100vh;
-
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -26,180 +22,155 @@ body {
         "Yu Gothic",
         sans-serif;
 
-    color: #333;
+    color: #332b35;
 
     background:
         radial-gradient(
-            circle at 20% 10%,
-            rgba(255, 220, 235, 0.9),
-            transparent 35%
+            circle at 15% 10%,
+            rgba(255, 218, 235, 0.9),
+            transparent 32%
         ),
         radial-gradient(
-            circle at 80% 80%,
-            rgba(225, 215, 255, 0.8),
-            transparent 35%
+            circle at 88% 85%,
+            rgba(224, 214, 255, 0.82),
+            transparent 34%
         ),
         linear-gradient(
             135deg,
-            #fff7fb,
-            #f8f5ff
+            #fff8fc 0%,
+            #faf7ff 50%,
+            #fff9fc 100%
         );
 
-    padding: 30px 16px;
+    padding: 42px 20px 28px;
 }
 
-
-/* ---------- メイン ---------- */
-
 .container {
-    width: 100%;
-    max-width: 480px;
+    width: min(100%, 560px);
     margin: 0 auto;
 }
 
 
-/* ---------- プロフィール ---------- */
+/* ---------- PROFILE ---------- */
 
 .profile {
     text-align: center;
-    padding: 15px 10px 28px;
+    padding: 4px 10px 34px;
 }
 
-
-/* プロフィール画像 */
-
 .profile-image {
-    width: 105px;
-    height: 105px;
+    width: 126px;
+    height: 126px;
+    margin: 0 auto 18px;
 
-    margin: 0 auto 16px;
-
+    padding: 4px;
     border-radius: 50%;
+    overflow: hidden;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 38px;
-    font-weight: 700;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9fc5,
-            #c7a8ff
-        );
+    background: rgba(255, 255, 255, 0.94);
 
     box-shadow:
-        0 10px 30px rgba(210, 145, 190, 0.25);
-
-    border: 4px solid rgba(255, 255, 255, 0.9);
+        0 12px 34px rgba(172, 126, 165, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.85);
 }
 
 .profile-image img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-}
 
-/* 名前 */
+    border-radius: 50%;
+
+    /*
+       profile.jpg is a vertical photo.
+       Move the crop upward so the face stays clearly visible.
+    */
+    object-fit: cover;
+    object-position: center 24%;
+}
 
 .profile h1 {
-    font-size: 25px;
+    font-size: clamp(23px, 5vw, 28px);
     font-weight: 700;
-    letter-spacing: 0.04em;
-
-    color: #29212a;
+    line-height: 1.35;
+    letter-spacing: 0.06em;
+    color: #2c252d;
 }
-
-
-/* ユーザー名 */
 
 .username {
-    margin-top: 5px;
-
-    font-size: 13px;
-    color: #a28da0;
-
-    letter-spacing: 0.12em;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.14em;
+    color: #a18b9d;
 }
 
-
-/* プロフィール文章 */
-
 .bio {
-    margin-top: 13px;
-
+    margin-top: 14px;
     font-size: 12px;
-    line-height: 1.8;
-
+    line-height: 1.85;
+    letter-spacing: 0.05em;
     color: #806f7d;
 }
 
 
-/* ---------- SNSリンク ---------- */
+/* ---------- LINKS ---------- */
 
 .links {
     display: flex;
     flex-direction: column;
-
     gap: 14px;
 }
-
-
-/* 各リンク */
 
 .link-card {
     position: relative;
 
-    min-height: 72px;
+    width: 100%;
+    min-height: 78px;
 
     display: flex;
     align-items: center;
 
-    padding: 12px 18px;
+    padding: 13px 19px;
 
     text-decoration: none;
-    color: #333;
+    color: inherit;
 
     background: rgba(255, 255, 255, 0.78);
-
-    border: 1px solid rgba(255, 255, 255, 0.9);
-
+    border: 1px solid rgba(255, 255, 255, 0.92);
     border-radius: 22px;
 
     box-shadow:
-        0 8px 25px rgba(150, 120, 160, 0.09);
+        0 9px 28px rgba(145, 118, 154, 0.10);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        background 0.22s ease;
 }
-
-
-/* マウスを乗せたとき */
 
 .link-card:hover {
     transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.9);
 
     box-shadow:
-        0 14px 30px rgba(150, 120, 160, 0.16);
+        0 15px 34px rgba(145, 118, 154, 0.17);
+}
+
+.link-card:active {
+    transform: translateY(-1px);
 }
 
 
-/* ---------- アイコン ---------- */
+/* ---------- ICONS ---------- */
 
 .icon {
-    width: 46px;
-    height: 46px;
-
-    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
 
     display: flex;
     align-items: center;
@@ -209,160 +180,195 @@ body {
 
     font-size: 21px;
     font-weight: 700;
-
-    color: white;
+    line-height: 1;
+    color: #fff;
 }
-
-
-/* Instagram */
 
 .instagram .icon {
     background:
         linear-gradient(
             135deg,
-            #ffcf8b,
-            #ff7eb3,
-            #b388ff
+            #ffd18e 0%,
+            #ff82b5 48%,
+            #a98cff 100%
         );
 }
 
-
-/* TikTok */
-
 .tiktok .icon {
-    background: #161616;
+    background: #171717;
 }
-
-
-/* X */
 
 .x .icon {
     background: #111;
 }
 
 
-/* LINE */
-
-.line .icon {
-    background: #67c94b;
-}
-
-
-/* ---------- 文字 ---------- */
+/* ---------- TEXT ---------- */
 
 .link-text {
+    min-width: 0;
+
     display: flex;
     flex-direction: column;
+    gap: 4px;
 
-    margin-left: 14px;
-
-    gap: 3px;
-
-    min-width: 0;
+    margin-left: 15px;
+    padding-right: 10px;
 }
-
 
 .link-text strong {
     font-size: 15px;
     font-weight: 700;
-
-    color: #29232b;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    color: #2d2730;
 }
-
 
 .link-text span {
     font-size: 11px;
-
-    color: #9a8995;
-
-    white-space: nowrap;
+    line-height: 1.45;
+    color: #998896;
+    overflow-wrap: anywhere;
 }
-
-
-/* ---------- 矢印 ---------- */
 
 .arrow {
     margin-left: auto;
+    flex: 0 0 auto;
 
-    font-size: 28px;
+    font-size: 29px;
     font-weight: 300;
-
-    color: #c2adb9;
+    line-height: 1;
+    color: #c0aeba;
 
     transition: transform 0.2s ease;
 }
-
 
 .link-card:hover .arrow {
     transform: translateX(4px);
 }
 
 
-/* ---------- フッター ---------- */
+/* ---------- FOOTER ---------- */
 
 footer {
     text-align: center;
-
-    padding: 35px 0 15px;
+    padding: 38px 0 8px;
 }
-
 
 footer p {
-    font-size: 11px;
-
+    font-size: 10px;
+    line-height: 1.5;
     letter-spacing: 0.2em;
-
-    color: #b294a9;
+    color: #b394aa;
 }
-
 
 footer small {
     display: block;
-
-    margin-top: 8px;
+    margin-top: 9px;
 
     font-size: 9px;
-
-    color: #c4b5c0;
+    line-height: 1.5;
+    color: #c2b3bf;
 }
 
 
-/* =========================
-   小さいスマホ用
-   ========================= */
+/* ---------- PC ---------- */
 
-@media (max-width: 380px) {
-
+@media (min-width: 700px) {
     body {
-        padding: 20px 12px;
+        padding-top: 58px;
+        padding-bottom: 34px;
     }
 
     .profile {
-        padding-bottom: 23px;
+        padding-bottom: 38px;
     }
 
     .profile-image {
-        width: 92px;
-        height: 92px;
+        width: 136px;
+        height: 136px;
+        margin-bottom: 20px;
+    }
+
+    .links {
+        gap: 16px;
+    }
+
+    .link-card {
+        min-height: 82px;
+        padding: 14px 21px;
+        border-radius: 23px;
+    }
+
+    .link-text strong {
+        font-size: 16px;
+    }
+
+    .link-text span {
+        font-size: 11px;
+    }
+
+    footer {
+        padding-top: 42px;
+    }
+}
+
+
+/* ---------- SMALL SMARTPHONES ---------- */
+
+@media (max-width: 380px) {
+    body {
+        padding: 24px 12px 20px;
+    }
+
+    .profile {
+        padding-bottom: 28px;
+    }
+
+    .profile-image {
+        width: 102px;
+        height: 102px;
+        margin-bottom: 15px;
+    }
+
+    .profile-image img {
+        object-position: center 24%;
     }
 
     .profile h1 {
         font-size: 22px;
     }
 
+    .username {
+        font-size: 11px;
+    }
+
+    .bio {
+        margin-top: 11px;
+        font-size: 11px;
+    }
+
+    .links {
+        gap: 11px;
+    }
+
     .link-card {
         min-height: 68px;
-        padding: 10px 14px;
+        padding: 10px 13px;
+        border-radius: 19px;
     }
 
     .icon {
         width: 42px;
         height: 42px;
+        flex-basis: 42px;
         border-radius: 13px;
+        font-size: 19px;
     }
 
     .link-text {
         margin-left: 11px;
+        gap: 2px;
     }
 
     .link-text strong {
@@ -373,4 +379,11 @@ footer small {
         font-size: 10px;
     }
 
+    .arrow {
+        font-size: 25px;
+    }
+
+    footer {
+        padding-top: 30px;
+    }
 }
